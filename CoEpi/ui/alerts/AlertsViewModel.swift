@@ -24,6 +24,7 @@ class AlertsViewModel {
     private static func formatTitleLabel(count: Int) -> String {
         let title: String = "\(count) new contact alert"
         
+        // Show number of new alerts. This is functional, but has an issue. It only updates when the alert view is loaded. This is likely the wrong place for this, but it demonstrates the functionality. A space for this is called out in CoepiRepo.swift
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
             if error == nil {
                 DispatchQueue.main.async {
