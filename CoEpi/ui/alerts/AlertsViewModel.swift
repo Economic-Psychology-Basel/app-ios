@@ -1,6 +1,8 @@
 import Dip
 import RxCocoa
 import RxSwift
+import UserNotifications
+import UIKit
 
 class AlertsViewModel {
     private let alertRepo: AlertRepo
@@ -21,6 +23,14 @@ class AlertsViewModel {
 
     private static func formatTitleLabel(count: Int) -> String {
         let title: String = "\(count) new contact alert"
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+            if error == nil {
+                DispatchQueue.main.async {
+                    UIApplication.shared.applicationIconBadgeNumber = count
+                }
+            }
+        }
         
         if count < 2 {
             return title

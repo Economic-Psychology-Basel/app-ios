@@ -27,6 +27,11 @@ class OnboardingViewController: UIViewController {
         setupGradient()
         setupButtons()
         setupLabels()
+        //ask for notification permissions, not sure if this is the best place for it.
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+            if error == nil {
+            }
+        }
     }
     
     func setupGradient() {
