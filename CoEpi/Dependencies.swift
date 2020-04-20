@@ -63,6 +63,7 @@ class Dependencies {
 
     private func registerLogic(container: DependencyContainer) {
         container.register(.singleton) { CenLogic() }
+        container.register(.eagerSingleton) {ShowNotifications(CoEpiRepo: try container.resolve())}
     }
 
     private func registerNetworking(container: DependencyContainer) {

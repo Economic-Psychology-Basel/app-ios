@@ -24,6 +24,8 @@ class RootWireFrame {
 
         let keyValueStore: KeyValueStore = try! container.resolve()
         showOnboardingIfNeeded(keyValueStore: keyValueStore, parent: homeViewController)
+        
+        notificationPermissions()
     }
 
     private func showOnboardingIfNeeded(keyValueStore: KeyValueStore, parent: UIViewController) {

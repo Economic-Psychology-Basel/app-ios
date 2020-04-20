@@ -1,7 +1,6 @@
 import Foundation
 import RxSwift
 import os.log
-import UserNotifications
 
 // NOTE: This is interace for possible Rust shared library
 // Reports storage unclear, most likely shared lib forwards api call result, we cache in Realm
@@ -71,21 +70,6 @@ class CoEpiRepoImpl: CoEpiRepo {
                 }
                 if !matchedKeys.isEmpty {
                     os_log("Matches found for [%{public}d] keys: %{public}@", log: servicesLog, type: .debug, matchedKeys.count ,"\(matchedKeys)")
-
-                    //Show notification that matches were found (background)
-                        //Needs to open alert view
-                    let content = UNMutableNotificationContent()
-                    content.title = "New Contact Alerts"
-                    content.body = "New contact alerts have been detected. Tap for details."
-                    content.sound = UNNotificationSound.default
-                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-                    let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-                    UNUserNotificationCenter.current().add(request)
-                    
-                    //Show notification that matches were found (foreground) TODO
-                    
-                    //Show badge number TODO
-
                 } else {
                     os_log("No matches found for keys", log: servicesLog, type: .debug)
                 }
