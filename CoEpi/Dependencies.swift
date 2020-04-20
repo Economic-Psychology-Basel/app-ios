@@ -23,7 +23,7 @@ class Dependencies {
     }
 
     private func registerViewModels(container: DependencyContainer) {
-        container.register { HomeViewModel() }
+        container.register { HomeViewModel(startPermissions: try container.resolve()) }
         container.register { OnboardingWireframe(container: container) }
         container.register { OnboardingViewModel() }
         container.register { HealthQuizViewModel(symptomRepo: try container.resolve()) }
@@ -63,7 +63,7 @@ class Dependencies {
 
     private func registerLogic(container: DependencyContainer) {
         container.register(.singleton) { CenLogic() }
-        container.register(.eagerSingleton) {ShowNotifications(CoEpiRepo: try container.resolve())}
+        container.register(.eagerSingleton) { AlertNotificationsShower(alertsRepo: try container.resolve()) }
     }
 
     private func registerNetworking(container: DependencyContainer) {
@@ -84,6 +84,7 @@ class Dependencies {
 
     private func registerSystem(container: DependencyContainer) {
         container.register(.singleton) { KeyValueStoreImpl() as KeyValueStore }
+        container.register(.singleton) { StartPermissionsImpl() as StartPermissions }
     }
 }
 

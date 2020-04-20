@@ -17,7 +17,7 @@
 		30EF955B2432E009007D61C7 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 30EF955A2432E009007D61C7 /* CryptoSwift */; };
 		30EF956D24363115007D61C7 /* CoEpiNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF956C24363115007D61C7 /* CoEpiNetworkingTests.swift */; };
 		30EF957A24379E01007D61C7 /* CoEpiLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30EF957924379E01007D61C7 /* CoEpiLaunchScreen.storyboard */; };
-		623CC8A6244DF08A00C8187E /* ShowNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623CC8A5244DF08A00C8187E /* ShowNotification.swift */; };
+		623CC8A6244DF08A00C8187E /* AlertNotificationsShower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623CC8A5244DF08A00C8187E /* AlertNotificationsShower.swift */; };
 		62983D8F243CE25F00B0294C /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF972324280ABA001ADD6B /* RootWireframe.swift */; };
 		62983D90243CE39E00B0294C /* HealthQuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE98BE98242DDCBC00EFB67A /* HealthQuizViewModel.swift */; };
 		62983D91243CE60600B0294C /* RealmDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4B9B7242CC97600516F3B /* RealmDao.swift */; };
@@ -30,6 +30,7 @@
 		8420169D244CA3F1000EE281 /* ActivityIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8420169C244CA3F1000EE281 /* ActivityIndicatorView.xib */; };
 		844D26BA24479DCA0045FDD6 /* TCNClient in Frameworks */ = {isa = PBXBuildFile; productRef = 844D26B924479DCA0045FDD6 /* TCNClient */; };
 		844D26BC24479E1D0045FDD6 /* BleAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D26BB24479E1D0045FDD6 /* BleAdapter.swift */; };
+		841D39A0244E3EE200A9CD64 /* StartPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D399F244E3EE200A9CD64 /* StartPermissions.swift */; };
 		848434522438BF91006A5839 /* SwiftEntryKit in Frameworks */ = {isa = PBXBuildFile; productRef = 848434512438BF91006A5839 /* SwiftEntryKit */; };
 		848434552438C03C006A5839 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848434542438C03C006A5839 /* ErrorView.swift */; };
 		848434572438C046006A5839 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848434562438C046006A5839 /* ErrorView.xib */; };
@@ -191,7 +192,7 @@
 		4A8C33FD92971388B446839F /* Pods-CoEpiNetworkingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoEpiNetworkingTests.release.xcconfig"; path = "Target Support Files/Pods-CoEpiNetworkingTests/Pods-CoEpiNetworkingTests.release.xcconfig"; sourceTree = "<group>"; };
 		4AB30FDD8E48688E1BF91F91 /* Pods_CoEpi_CoEpiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoEpi_CoEpiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E087D09295263EB6A4DB967 /* Pods-CoEpi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoEpi.debug.xcconfig"; path = "Target Support Files/Pods-CoEpi/Pods-CoEpi.debug.xcconfig"; sourceTree = "<group>"; };
-		623CC8A5244DF08A00C8187E /* ShowNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowNotification.swift; sourceTree = "<group>"; };
+		623CC8A5244DF08A00C8187E /* AlertNotificationsShower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotificationsShower.swift; sourceTree = "<group>"; };
 		74BF972AC9A1ED47A016DA3D /* Pods-CoEpi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoEpi.release.xcconfig"; path = "Target Support Files/Pods-CoEpi/Pods-CoEpi.release.xcconfig"; sourceTree = "<group>"; };
 		83D98C7D6EAEBFA0E5292E3F /* Pods_CoEpi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoEpi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84201690244B21FF000EE281 /* UnixTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnixTime.swift; sourceTree = "<group>"; };
@@ -200,6 +201,7 @@
 		84201699244CA1AC000EE281 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		8420169C244CA3F1000EE281 /* ActivityIndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityIndicatorView.xib; sourceTree = "<group>"; };
 		844D26BB24479E1D0045FDD6 /* BleAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BleAdapter.swift; sourceTree = "<group>"; };
+		841D399F244E3EE200A9CD64 /* StartPermissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPermissions.swift; sourceTree = "<group>"; };
 		848434542438C03C006A5839 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		848434562438C046006A5839 /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
 		848434582438C28A006A5839 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
@@ -415,6 +417,14 @@
 				84201699244CA1AC000EE281 /* ActivityIndicatorView.swift */,
 			);
 			path = "activity indicator";
+			sourceTree = "<group>";
+		};
+		841D399E244E3EAF00A9CD64 /* permissions */ = {
+			isa = PBXGroup;
+			children = (
+				841D399F244E3EE200A9CD64 /* StartPermissions.swift */,
+			);
+			path = permissions;
 			sourceTree = "<group>";
 		};
 		848434532438C029006A5839 /* error */ = {
@@ -666,6 +676,7 @@
 			isa = PBXGroup;
 			children = (
 				8420169B244CA3D9000EE281 /* activity indicator */,
+				841D399E244E3EAF00A9CD64 /* permissions */,
 				84EE1C5B2441D7220055E22B /* common */,
 				30EF957824379DD8007D61C7 /* launch screen */,
 				8484345C2438C3E6006A5839 /* traits */,
@@ -750,7 +761,7 @@
 		CE626E072430A787000DB8E7 /* alerts */ = {
 			isa = PBXGroup;
 			children = (
-				623CC8A5244DF08A00C8187E /* ShowNotification.swift */,
+				623CC8A5244DF08A00C8187E /* AlertNotificationsShower.swift */,
 				30EF94F9242CFC9F007D61C7 /* AlertsViewController.swift */,
 				CE626E082430A98B000DB8E7 /* AlertsViewModel.swift */,
 				CE626E0A2430A9A9000DB8E7 /* AlertCell.swift */,
@@ -1130,7 +1141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				623CC8A6244DF08A00C8187E /* ShowNotification.swift in Sources */,
+				623CC8A6244DF08A00C8187E /* AlertNotificationsShower.swift in Sources */,
 				62983D91243CE60600B0294C /* RealmDao.swift in Sources */,
 				62983D90243CE39E00B0294C /* HealthQuizViewModel.swift in Sources */,
 				62983D8F243CE25F00B0294C /* RootWireframe.swift in Sources */,
@@ -1206,6 +1217,7 @@
 				849D28FB244436280034EC4C /* Array+Convenience.swift in Sources */,
 				84FA00F22427E13000318104 /* Dependencies.swift in Sources */,
 				CE98BE9B242DDCFD00EFB67A /* QuestionCell.swift in Sources */,
+				841D39A0244E3EE200A9CD64 /* StartPermissions.swift in Sources */,
 				848434642438C71F006A5839 /* UIViewController+Rx.swift in Sources */,
 				8420169A244CA1AC000EE281 /* ActivityIndicatorView.swift in Sources */,
 				CE6B7ABD243324BA00C42280 /* RealmCENReportDao.swift in Sources */,
