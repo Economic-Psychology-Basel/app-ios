@@ -23,10 +23,10 @@ class Dependencies {
     }
 
     private func registerViewModels(container: DependencyContainer) {
-        container.register { HomeViewModel(startPermissions: try container.resolve()) }
+        container.register { HomeViewModel(startPermissions: try container.resolve(), rootNav: try container.resolve()) }
         container.register { OnboardingWireframe(container: container) }
         container.register { OnboardingViewModel() }
-        container.register { HealthQuizViewModel(symptomRepo: try container.resolve()) }
+        container.register { HealthQuizViewModel(symptomRepo: try container.resolve(), rootNav: try container.resolve()) }
         container.register { AlertsViewModel(container: container) }
 
         container.register { DebugViewModel(bleAdapter: try container.resolve(),
@@ -69,6 +69,7 @@ class Dependencies {
                                                                    notificationShower: try container.resolve(),
                                                                    appBadgeUpdater: try container.resolve())
             as MatchingReportsHandler }
+        container.register(.eagerSingleton) { NotificationsDelegate(rootNav: try container.resolve()) }
     }
 
     private func registerLogic(container: DependencyContainer) {
@@ -90,6 +91,7 @@ class Dependencies {
                                                                    notificationShower: try container.resolve(),
                                                                    appBadgeUpdater: try container.resolve())
             as MatchingReportsHandler }
+        container.register(.eagerSingleton) { RootNav() }
     }
 
     private func registerBle(container: DependencyContainer) {

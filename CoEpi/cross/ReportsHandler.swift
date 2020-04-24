@@ -30,6 +30,7 @@ class MatchingReportsHandlerImpl: MatchingReportsHandler {
 
     private func notifiyNewAlerts(count: Int) {
         notificationShower.showNotification(data: NotificationData(
+            id: .alerts,
             title: "New Contact Alerts",
             body: "New contact alerts have been detected. Tap for details.")
         )

@@ -1,20 +1,16 @@
 import RxSwift
 import os.log
 
-protocol HomeViewModelDelegate {
-    func debugTapped()
-    func checkInTapped()
-    func seeAlertsTapped()
-}
-
 class HomeViewModel {
-    var delegate: HomeViewModelDelegate?
-    
     let title = "CoEpi"
 
     private let disposeBag = DisposeBag()
 
-    init(startPermissions: StartPermissions) {
+    private let rootNav: RootNav
+
+    init(startPermissions: StartPermissions, rootNav: RootNav) {
+        self.rootNav = rootNav
+
         startPermissions.granted.subscribe(onNext: { granted in
             os_log("Start permissions granted: %@", log: servicesLog, type: .debug, "\(granted)")
         }).disposed(by: disposeBag)
@@ -23,14 +19,14 @@ class HomeViewModel {
     }
 
     func debugTapped() {
-        delegate?.debugTapped()
+        rootNav.navigate(command: .to(destination: .debug))
     }
     
     func quizTapped() {
-        delegate?.checkInTapped()
+        rootNav.navigate(command: .to(destination: .quiz))
     }
     
     func seeAlertsTapped() {
-        delegate?.seeAlertsTapped()
+        rootNav.navigate(command: .to(destination: .alerts))
     }
 }
