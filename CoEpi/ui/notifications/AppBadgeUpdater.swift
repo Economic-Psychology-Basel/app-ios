@@ -10,13 +10,20 @@ protocol AppBadgeUpdater {
 class AppBadgeUpdaterImpl: AppBadgeUpdater {
 
     func updateAppBadge(number: Int) {
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
-            if error == nil {
-                DispatchQueue.main.async {
-                    os_log("Updating app badge: %@", log: servicesLog, type: .debug, "\(number)")
-                    UIApplication.shared.applicationIconBadgeNumber = number
-                }
-            }
+        UNUserNotificationCenter.current().getNotificationSettings { [weak self] settings in
+            self?.updateAppBadge(number: number, settings: settings)
+        }
+    }
+
+    private func updateAppBadge(number: Int, settings: UNNotificationSettings) {
+        guard
+            settings.authorizationStatus == .authorized || settings.authorizationStatus == .provisional,
+            settings.badgeSetting == .enabled
+        else { return }
+
+        DispatchQueue.main.async {
+            os_log("Updating app badge: %@", log: servicesLog, type: .debug, "\(number)")
+            UIApplication.shared.applicationIconBadgeNumber = number
         }
     }
 }
