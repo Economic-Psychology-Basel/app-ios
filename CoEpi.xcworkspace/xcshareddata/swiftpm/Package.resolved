@@ -131,9 +131,9 @@
         "package": "TCNClient",
         "repositoryURL": "https://github.com/TCNCoalition/tcn-client-ios",
         "state": {
-          "branch": "develop",
-          "revision": "f3735e00e7c51fb8365561384e8fd7e2a656aeb6",
-          "version": null
+          "branch": null,
+          "revision": "c86b034472f0b3217617bb7927f97093bb6be464",
+          "version": "0.4.1"
         }
       }
     ]
