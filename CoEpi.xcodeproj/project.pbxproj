@@ -58,6 +58,7 @@
 		849327B62452D947009589E6 /* FetchAlertsBackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849327B52452D947009589E6 /* FetchAlertsBackgroundTask.swift */; };
 		849327B82452D972009589E6 /* BackgroundTaskScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849327B72452D972009589E6 /* BackgroundTaskScheduler.swift */; };
 		849327BD2452ED45009589E6 /* ReportsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849327BC2452ED45009589E6 /* ReportsHandler.swift */; };
+		8493283D2452F983009589E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493283C2452F983009589E6 /* SceneDelegate.swift */; };
 		849811582436119300EBD1DA /* CoEpiRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849811572436119300EBD1DA /* CoEpiRepo.swift */; };
 		8498115A2436175500EBD1DA /* CenLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FB1162436056500BD1302 /* CenLogic.swift */; };
 		8498115D243630E500EBD1DA /* ScannedCensHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498115C243630E500EBD1DA /* ScannedCensHandler.swift */; };
@@ -231,6 +232,7 @@
 		849327B52452D947009589E6 /* FetchAlertsBackgroundTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAlertsBackgroundTask.swift; sourceTree = "<group>"; };
 		849327B72452D972009589E6 /* BackgroundTaskScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTaskScheduler.swift; sourceTree = "<group>"; };
 		849327BC2452ED45009589E6 /* ReportsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsHandler.swift; sourceTree = "<group>"; };
+		8493283C2452F983009589E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		849811572436119300EBD1DA /* CoEpiRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoEpiRepo.swift; sourceTree = "<group>"; };
 		8498115C243630E500EBD1DA /* ScannedCensHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannedCensHandler.swift; sourceTree = "<group>"; };
 		849CEFA1242FEDE7003F9284 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = CoEpi/ui/theme/Theme.swift; sourceTree = SOURCE_ROOT; };
@@ -580,6 +582,7 @@
 				84FA00F82427EC4300318104 /* ui */,
 				84DDC4D424519138002F6D82 /* bg task */,
 				849DFE652427D3750008ED65 /* AppDelegate.swift */,
+				8493283C2452F983009589E6 /* SceneDelegate.swift */,
 				849DFE712427D37A0008ED65 /* Assets.xcassets */,
 				849DFE732427D37A0008ED65 /* LaunchScreen.storyboard */,
 				849DFE762427D37A0008ED65 /* Info.plist */,
@@ -1194,6 +1197,7 @@
 				CE6B7AC9243327FF00C42280 /* RealmCENKey.swift in Sources */,
 				848434622438C622006A5839 /* UIViewController+ErrorView.swift in Sources */,
 				8486BDE0242BC8B600A63DD5 /* HomeViewModel.swift in Sources */,
+				8493283D2452F983009589E6 /* SceneDelegate.swift in Sources */,
 				8491497F2436946900975344 /* CenMatcher.swift in Sources */,
 				8498115D243630E500EBD1DA /* ScannedCensHandler.swift in Sources */,
 				849CEFA3242FEE23003F9284 /* UIColor+Hex.swift in Sources */,
