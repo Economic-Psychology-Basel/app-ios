@@ -16,7 +16,7 @@ class BackgroundTaskScheduler {
     }
 
     func applicationDidEnterBackground() {
-        schedule(delay: 0)
+        schedule(delay: task.scheduleInterval)
     }
 
     private func register(taskIdentifier: String) {
@@ -42,7 +42,7 @@ class BackgroundTaskScheduler {
         os_log("Scheduling BG task. Delay: %@", log: servicesLog, type: .debug, "\(delay)")
 
         let request = BGProcessingTaskRequest(identifier: task.identifier)
-        request.earliestBeginDate = nil
+        request.earliestBeginDate = Date(timeIntervalSinceNow: delay)
         do {
           // NOTE: This has to be called on a bg thread if used while app is launched.
           // Not needed if used when app is send to bg.
